@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DVMCardViewController" customModule="DeckofOneCardObjC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poker-table-background_77211-140" translatesAutoresizingMaskIntoConstraints="NO" id="ShB-BF-rgi">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vcp-h7-q2Q">
+                                <rect key="frame" x="41.5" y="139.5" width="331" height="627"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cR0-zR-Mux">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="433"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cR0-zR-Mux" secondAttribute="height" multiplier="240:314" id="RVk-cM-j9w"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(suit)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXE-Om-CZO">
+                                        <rect key="frame" x="0.0" y="443" width="331" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkx-gs-FAb">
+                                        <rect key="frame" x="0.0" y="473.5" width="331" height="153.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                        <state key="normal" title="Draw Card">
+                                            <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="DrawCardButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hxo-lm-fjO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12868466501986967" green="0.4983938769035533" blue="0.22441136998327557" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vcp-h7-q2Q" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Deh-p5-2qX"/>
+                            <constraint firstItem="ShB-BF-rgi" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="Nn0-Ym-dbt"/>
+                            <constraint firstItem="ShB-BF-rgi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="Q27-bA-Geo"/>
+                            <constraint firstItem="vcp-h7-q2Q" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="VR0-SM-mp4"/>
+                            <constraint firstItem="ShB-BF-rgi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerYWithinMargins" id="gO8-Jn-MT1"/>
+                            <constraint firstItem="vcp-h7-q2Q" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="mTG-0h-nPr"/>
+                            <constraint firstItem="ShB-BF-rgi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="o3u-dR-Hem"/>
+                            <constraint firstItem="vcp-h7-q2Q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="t2v-AM-0ZY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="cR0-zR-Mux" id="Bop-Sv-MII"/>
+                        <outlet property="cardSuitLabel" destination="GXE-Om-CZO" id="mUJ-pi-14g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="120"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="poker-table-background_77211-140" width="626" height="440"/>
+    </resources>
+</document>
